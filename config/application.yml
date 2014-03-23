@@ -1,0 +1,11 @@
+# 
+# Add application configuration variables here, as shown below.
+#
+# PUSHER_APP_ID: "2954"
+# PUSHER_KEY: 7381a978f7dd7f9a1117
+# PUSHER_SECRET: abdc3b896a0ffb85d373
+# STRIPE_API_KEY: EdAvEPVEC3LuaTg5Q3z6WbDVqZlcBQ8Z
+# STRIPE_PUBLIC_KEY: pk_BRgD57O8fHja9HxduJUszhef6jCyS
+SOUNDCLOUD_API_KEY: "1ab8063d98ed50fded31ee8b3e5e5e89"
+SOUNDCLOUD_CONSUMER_SECRET: "daba68dcadd90ecf2da7dab4d6acdb85"
+

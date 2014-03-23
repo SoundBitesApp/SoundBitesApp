@@ -1,0 +1,354 @@
+PG::UndefinedTable: ERROR:  relation "users" does not exist
+LINE 5:                WHERE a.attrelid = '"users"'::regclass
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"users"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+
+PG::UndefinedTable: ERROR:  relation "users" does not exist
+LINE 5:                WHERE a.attrelid = '"users"'::regclass
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"users"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+
+PG::UndefinedTable: ERROR:  relation "users" does not exist
+LINE 5:                WHERE a.attrelid = '"users"'::regclass
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"users"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+
+PG::UndefinedTable: ERROR:  relation "users" does not exist
+LINE 5:                WHERE a.attrelid = '"users"'::regclass
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"users"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+
+PG::UndefinedTable: ERROR:  relation "users" does not exist
+LINE 5:                WHERE a.attrelid = '"users"'::regclass
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"users"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+
+PG::UndefinedTable: ERROR:  relation "users" does not exist
+LINE 5:                WHERE a.attrelid = '"users"'::regclass
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"users"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+
+PG::UndefinedTable: ERROR:  relation "users" does not exist
+LINE 5:                WHERE a.attrelid = '"users"'::regclass
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"users"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.9ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."slug" = 'freida' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'carroll@hudson.net' LIMIT 1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER('freida') LIMIT 1
+  [1m[36mSQL (4.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "roles", "slug", "updated_at", "username") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", Sat, 22 Mar 2014 20:45:28 UTC +00:00], ["email", "carroll@hudson.net"], ["encrypted_password", "$2a$04$0p1FBakm9lW8aNMtPtAXje0qlexlEtV6CC1sOjgeZRnzyfir59IHS"], ["roles", "--- []\n"], ["slug", "freida"], ["updated_at", Sat, 22 Mar 2014 20:45:28 UTC +00:00], ["username", "freida"]]
+  [1m[35mUser Exists (0.4ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."email" = 'carroll@hudson.net' AND "users"."id" != 1) LIMIT 1
+  [1m[36mIdentity Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "identities" WHERE "identities"."user_id" = $1 LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mIdentity Exists (0.1ms)[0m  SELECT 1 AS one FROM "identities" WHERE "identities"."user_id" = $1 LIMIT 1  [["user_id", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE (LOWER("users"."username") = LOWER('freida') AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "roles" = $1, "email" = $2, "username" = $3, "encrypted_password" = $4, "slug" = $5, "created_at" = $6, "updated_at" = $7, "id" = $8 WHERE "users"."id" = 1  [["roles", "---\n- user\n"], ["email", "carroll@hudson.net"], ["username", "freida"], ["encrypted_password", "$2a$04$0p1FBakm9lW8aNMtPtAXje0qlexlEtV6CC1sOjgeZRnzyfir59IHS"], ["slug", "freida"], ["created_at", Sat, 22 Mar 2014 20:45:28 UTC +00:00], ["updated_at", Sat, 22 Mar 2014 20:45:28 UTC +00:00], ["id", 1]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mIdentity Exists (0.3ms)[0m  SELECT 1 AS one FROM "identities" WHERE "identities"."user_id" = $1 LIMIT 1  [["user_id", 1]]
+  [1m[36mIdentity Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "identities" WHERE "identities"."user_id" = $1 LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mUser Exists (0.9ms)[0m  SELECT 1 AS one FROM "users" WHERE (LOWER("users"."username") = LOWER('freida') AND "users"."id" != 1) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."slug" = 'gianni' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'loren@smith.biz' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER('gianni') LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "roles", "slug", "updated_at", "username") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", Sat, 22 Mar 2014 20:45:28 UTC +00:00], ["email", "loren@smith.biz"], ["encrypted_password", "$2a$04$lJ4BOYt2Y3SbaQM./Gv4V.eXYoMmk7CX9N00g8lw75Aue2yRGzXCO"], ["roles", "--- []\n"], ["slug", "gianni"], ["updated_at", Sat, 22 Mar 2014 20:45:28 UTC +00:00], ["username", "gianni"]]
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."email" = 'loren@smith.biz' AND "users"."id" != 2) LIMIT 1
+  [1m[36mIdentity Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "identities" WHERE "identities"."user_id" = $1 LIMIT 1[0m  [["user_id", 2]]
+  [1m[35mIdentity Exists (0.2ms)[0m  SELECT 1 AS one FROM "identities" WHERE "identities"."user_id" = $1 LIMIT 1  [["user_id", 2]]
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE (LOWER("users"."username") = LOWER('gianni') AND "users"."id" != 2) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "roles" = $1, "email" = $2, "username" = $3, "encrypted_password" = $4, "slug" = $5, "created_at" = $6, "updated_at" = $7, "id" = $8 WHERE "users"."id" = 2  [["roles", "---\n- user\n"], ["email", "loren@smith.biz"], ["username", "gianni"], ["encrypted_password", "$2a$04$lJ4BOYt2Y3SbaQM./Gv4V.eXYoMmk7CX9N00g8lw75Aue2yRGzXCO"], ["slug", "gianni"], ["created_at", Sat, 22 Mar 2014 20:45:28 UTC +00:00], ["updated_at", Sat, 22 Mar 2014 20:45:28 UTC +00:00], ["id", 2]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."slug" = 'edythe' LIMIT 1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'chet_kertzmann@millerlebsack.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER('edythe') LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "roles", "slug", "updated_at", "username") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", Sat, 22 Mar 2014 20:45:28 UTC +00:00], ["email", "chet_kertzmann@millerlebsack.com"], ["encrypted_password", "$2a$04$NVRhfYROVvVDNjXh5H4re.9Z8pSeyK/sveVGz7XxjRwHAJ04OVEBy"], ["roles", "--- []\n"], ["slug", "edythe"], ["updated_at", Sat, 22 Mar 2014 20:45:28 UTC +00:00], ["username", "edythe"]]
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."email" = 'chet_kertzmann@millerlebsack.com' AND "users"."id" != 3) LIMIT 1
+  [1m[36mIdentity Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "identities" WHERE "identities"."user_id" = $1 LIMIT 1[0m  [["user_id", 3]]
+  [1m[35mIdentity Exists (0.2ms)[0m  SELECT 1 AS one FROM "identities" WHERE "identities"."user_id" = $1 LIMIT 1  [["user_id", 3]]
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE (LOWER("users"."username") = LOWER('edythe') AND "users"."id" != 3) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "roles" = $1, "email" = $2, "username" = $3, "encrypted_password" = $4, "slug" = $5, "created_at" = $6, "updated_at" = $7, "id" = $8 WHERE "users"."id" = 3  [["roles", "---\n- user\n"], ["email", "chet_kertzmann@millerlebsack.com"], ["username", "edythe"], ["encrypted_password", "$2a$04$NVRhfYROVvVDNjXh5H4re.9Z8pSeyK/sveVGz7XxjRwHAJ04OVEBy"], ["slug", "edythe"], ["created_at", Sat, 22 Mar 2014 20:45:28 UTC +00:00], ["updated_at", Sat, 22 Mar 2014 20:45:28 UTC +00:00], ["id", 3]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."slug" = 'theo' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'astrid@mantebode.biz' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER('theo') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "roles", "slug", "updated_at", "username") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", Sat, 22 Mar 2014 20:45:28 UTC +00:00], ["email", "astrid@mantebode.biz"], ["encrypted_password", "$2a$04$tkFh0Jv92GmRsvOAHRZJku8NzkME5CL0RwPJWEVTWNoD6ANcjD6iG"], ["roles", "--- []\n"], ["slug", "theo"], ["updated_at", Sat, 22 Mar 2014 20:45:28 UTC +00:00], ["username", "theo"]]
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."email" = 'astrid@mantebode.biz' AND "users"."id" != 4) LIMIT 1[0m
+  [1m[35mIdentity Exists (0.1ms)[0m  SELECT 1 AS one FROM "identities" WHERE "identities"."user_id" = $1 LIMIT 1  [["user_id", 4]]
+  [1m[36mIdentity Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "identities" WHERE "identities"."user_id" = $1 LIMIT 1[0m  [["user_id", 4]]
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE (LOWER("users"."username") = LOWER('theo') AND "users"."id" != 4) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "roles" = $1, "email" = $2, "username" = $3, "encrypted_password" = $4, "slug" = $5, "created_at" = $6, "updated_at" = $7, "id" = $8 WHERE "users"."id" = 4[0m  [["roles", "---\n- user\n"], ["email", "astrid@mantebode.biz"], ["username", "theo"], ["encrypted_password", "$2a$04$tkFh0Jv92GmRsvOAHRZJku8NzkME5CL0RwPJWEVTWNoD6ANcjD6iG"], ["slug", "theo"], ["created_at", Sat, 22 Mar 2014 20:45:28 UTC +00:00], ["updated_at", Sat, 22 Mar 2014 20:45:28 UTC +00:00], ["id", 4]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."slug" = 'leanna' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'dino_wiza@rowereilly.info' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER('leanna') LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "roles", "slug", "updated_at", "username") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", Sat, 22 Mar 2014 20:45:28 UTC +00:00], ["email", "dino_wiza@rowereilly.info"], ["encrypted_password", "$2a$04$psrtdYs0ms7WVAgDug2V4eFsM9eobMB0PrZ4TPBnic2rAgNHHxglW"], ["roles", "--- []\n"], ["slug", "leanna"], ["updated_at", Sat, 22 Mar 2014 20:45:28 UTC +00:00], ["username", "leanna"]]
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."email" = 'dino_wiza@rowereilly.info' AND "users"."id" != 5) LIMIT 1
+  [1m[36mIdentity Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "identities" WHERE "identities"."user_id" = $1 LIMIT 1[0m  [["user_id", 5]]
+  [1m[35mIdentity Exists (0.1ms)[0m  SELECT 1 AS one FROM "identities" WHERE "identities"."user_id" = $1 LIMIT 1  [["user_id", 5]]
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE (LOWER("users"."username") = LOWER('leanna') AND "users"."id" != 5) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "roles" = $1, "email" = $2, "username" = $3, "encrypted_password" = $4, "slug" = $5, "created_at" = $6, "updated_at" = $7, "id" = $8 WHERE "users"."id" = 5  [["roles", "---\n- user\n"], ["email", "dino_wiza@rowereilly.info"], ["username", "leanna"], ["encrypted_password", "$2a$04$psrtdYs0ms7WVAgDug2V4eFsM9eobMB0PrZ4TPBnic2rAgNHHxglW"], ["slug", "leanna"], ["created_at", Sat, 22 Mar 2014 20:45:28 UTC +00:00], ["updated_at", Sat, 22 Mar 2014 20:45:28 UTC +00:00], ["id", 5]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."slug" = 'jose' LIMIT 1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER('jose') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER('jose') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."slug" = 'dale' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'kyle_shanahan@shields.info' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER('dale') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "roles", "slug", "updated_at", "username") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", Sat, 22 Mar 2014 20:45:28 UTC +00:00], ["email", "kyle_shanahan@shields.info"], ["encrypted_password", "$2a$04$oVccILuf248xZgf29v78uOY8Ip/n2jNpN/Cp0RK/FsY3nunocARpO"], ["roles", "--- []\n"], ["slug", "dale"], ["updated_at", Sat, 22 Mar 2014 20:45:28 UTC +00:00], ["username", "dale"]]
+  [1m[35mUser Exists (0.4ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."email" = 'kyle_shanahan@shields.info' AND "users"."id" != 6) LIMIT 1
+  [1m[36mIdentity Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "identities" WHERE "identities"."user_id" = $1 LIMIT 1[0m  [["user_id", 6]]
+  [1m[35mIdentity Exists (0.1ms)[0m  SELECT 1 AS one FROM "identities" WHERE "identities"."user_id" = $1 LIMIT 1  [["user_id", 6]]
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE (LOWER("users"."username") = LOWER('dale') AND "users"."id" != 6) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "roles" = $1, "email" = $2, "username" = $3, "encrypted_password" = $4, "slug" = $5, "created_at" = $6, "updated_at" = $7, "id" = $8 WHERE "users"."id" = 6  [["roles", "---\n- user\n"], ["email", "kyle_shanahan@shields.info"], ["username", "dale"], ["encrypted_password", "$2a$04$oVccILuf248xZgf29v78uOY8Ip/n2jNpN/Cp0RK/FsY3nunocARpO"], ["slug", "dale"], ["created_at", Sat, 22 Mar 2014 20:45:28 UTC +00:00], ["updated_at", Sat, 22 Mar 2014 20:45:28 UTC +00:00], ["id", 6]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."slug" = 'jose' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER('jose') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'sophie@conn.net' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER('jose') LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."slug" = 'justus' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'ari.spinka@kub.name' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER('justus') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "roles", "slug", "updated_at", "username") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", Sat, 22 Mar 2014 20:45:28 UTC +00:00], ["email", "ari.spinka@kub.name"], ["encrypted_password", "$2a$04$2RyKWdGG1Hw7Pm1O4HXIc.FbJ8bYGYvvx0uxmYPppKh/bm9YbStda"], ["roles", "--- []\n"], ["slug", "justus"], ["updated_at", Sat, 22 Mar 2014 20:45:28 UTC +00:00], ["username", "justus"]]
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."email" = 'ari.spinka@kub.name' AND "users"."id" != 7) LIMIT 1[0m
+  [1m[35mIdentity Exists (0.2ms)[0m  SELECT 1 AS one FROM "identities" WHERE "identities"."user_id" = $1 LIMIT 1  [["user_id", 7]]
+  [1m[36mIdentity Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "identities" WHERE "identities"."user_id" = $1 LIMIT 1[0m  [["user_id", 7]]
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE (LOWER("users"."username") = LOWER('justus') AND "users"."id" != 7) LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "users" SET "roles" = $1, "email" = $2, "username" = $3, "encrypted_password" = $4, "slug" = $5, "created_at" = $6, "updated_at" = $7, "id" = $8 WHERE "users"."id" = 7[0m  [["roles", "---\n- user\n"], ["email", "ari.spinka@kub.name"], ["username", "justus"], ["encrypted_password", "$2a$04$2RyKWdGG1Hw7Pm1O4HXIc.FbJ8bYGYvvx0uxmYPppKh/bm9YbStda"], ["slug", "justus"], ["created_at", Sat, 22 Mar 2014 20:45:28 UTC +00:00], ["updated_at", Sat, 22 Mar 2014 20:45:28 UTC +00:00], ["id", 7]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."slug" = 'jose' LIMIT 1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER('jose') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.8ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."slug" = 'chasity_little' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'micheal@torphyanderson.biz' LIMIT 1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER('chasity_little') LIMIT 1
+  [1m[36mSQL (3.6ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "roles", "slug", "updated_at", "username") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", Sat, 22 Mar 2014 20:46:19 UTC +00:00], ["email", "micheal@torphyanderson.biz"], ["encrypted_password", "$2a$04$ylzxYwWhxZnp0c5s0m2iSuS8Yd5xOTsGEiYgU/wNynWRUSg/uO7Uy"], ["roles", "--- []\n"], ["slug", "chasity_little"], ["updated_at", Sat, 22 Mar 2014 20:46:19 UTC +00:00], ["username", "chasity_little"]]
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."email" = 'micheal@torphyanderson.biz' AND "users"."id" != 8) LIMIT 1
+  [1m[36mIdentity Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "identities" WHERE "identities"."user_id" = $1 LIMIT 1[0m  [["user_id", 8]]
+  [1m[35mIdentity Exists (0.2ms)[0m  SELECT 1 AS one FROM "identities" WHERE "identities"."user_id" = $1 LIMIT 1  [["user_id", 8]]
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE (LOWER("users"."username") = LOWER('chasity_little') AND "users"."id" != 8) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "roles" = $1, "email" = $2, "username" = $3, "encrypted_password" = $4, "slug" = $5, "created_at" = $6, "updated_at" = $7, "id" = $8 WHERE "users"."id" = 8  [["roles", "---\n- user\n"], ["email", "micheal@torphyanderson.biz"], ["username", "chasity_little"], ["encrypted_password", "$2a$04$ylzxYwWhxZnp0c5s0m2iSuS8Yd5xOTsGEiYgU/wNynWRUSg/uO7Uy"], ["slug", "chasity_little"], ["created_at", Sat, 22 Mar 2014 20:46:19 UTC +00:00], ["updated_at", Sat, 22 Mar 2014 20:46:19 UTC +00:00], ["id", 8]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mIdentity Exists (0.2ms)[0m  SELECT 1 AS one FROM "identities" WHERE "identities"."user_id" = $1 LIMIT 1  [["user_id", 8]]
+  [1m[36mIdentity Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "identities" WHERE "identities"."user_id" = $1 LIMIT 1[0m  [["user_id", 8]]
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE (LOWER("users"."username") = LOWER('chasity_little') AND "users"."id" != 8) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."slug" = 'ignacio_lowe' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'nicholaus@sporer.info' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER('ignacio_lowe') LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "roles", "slug", "updated_at", "username") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", Sat, 22 Mar 2014 20:46:19 UTC +00:00], ["email", "nicholaus@sporer.info"], ["encrypted_password", "$2a$04$GJasFY31U97ldlAj4TuOzuvQ4bdi8w0Qnj913kuBxEQ8UUJmuPHLm"], ["roles", "--- []\n"], ["slug", "ignacio_lowe"], ["updated_at", Sat, 22 Mar 2014 20:46:19 UTC +00:00], ["username", "ignacio_lowe"]]
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."email" = 'nicholaus@sporer.info' AND "users"."id" != 9) LIMIT 1
+  [1m[36mIdentity Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "identities" WHERE "identities"."user_id" = $1 LIMIT 1[0m  [["user_id", 9]]
+  [1m[35mIdentity Exists (0.2ms)[0m  SELECT 1 AS one FROM "identities" WHERE "identities"."user_id" = $1 LIMIT 1  [["user_id", 9]]
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE (LOWER("users"."username") = LOWER('ignacio_lowe') AND "users"."id" != 9) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "roles" = $1, "email" = $2, "username" = $3, "encrypted_password" = $4, "slug" = $5, "created_at" = $6, "updated_at" = $7, "id" = $8 WHERE "users"."id" = 9  [["roles", "---\n- user\n"], ["email", "nicholaus@sporer.info"], ["username", "ignacio_lowe"], ["encrypted_password", "$2a$04$GJasFY31U97ldlAj4TuOzuvQ4bdi8w0Qnj913kuBxEQ8UUJmuPHLm"], ["slug", "ignacio_lowe"], ["created_at", Sat, 22 Mar 2014 20:46:19 UTC +00:00], ["updated_at", Sat, 22 Mar 2014 20:46:19 UTC +00:00], ["id", 9]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."slug" = 'mariano-beier' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'edyth@graham.biz' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER('mariano.beier') LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "roles", "slug", "updated_at", "username") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", Sat, 22 Mar 2014 20:46:19 UTC +00:00], ["email", "edyth@graham.biz"], ["encrypted_password", "$2a$04$QzNQIABDC3Bc9n3oQDUW..c11Xo4ilL8M/ZV.rhoG/qXMBHmzJ5r6"], ["roles", "--- []\n"], ["slug", "mariano-beier"], ["updated_at", Sat, 22 Mar 2014 20:46:19 UTC +00:00], ["username", "mariano.beier"]]
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."email" = 'edyth@graham.biz' AND "users"."id" != 10) LIMIT 1
+  [1m[36mIdentity Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "identities" WHERE "identities"."user_id" = $1 LIMIT 1[0m  [["user_id", 10]]
+  [1m[35mIdentity Exists (0.1ms)[0m  SELECT 1 AS one FROM "identities" WHERE "identities"."user_id" = $1 LIMIT 1  [["user_id", 10]]
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE (LOWER("users"."username") = LOWER('mariano.beier') AND "users"."id" != 10) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "roles" = $1, "email" = $2, "username" = $3, "encrypted_password" = $4, "slug" = $5, "created_at" = $6, "updated_at" = $7, "id" = $8 WHERE "users"."id" = 10  [["roles", "---\n- user\n"], ["email", "edyth@graham.biz"], ["username", "mariano.beier"], ["encrypted_password", "$2a$04$QzNQIABDC3Bc9n3oQDUW..c11Xo4ilL8M/ZV.rhoG/qXMBHmzJ5r6"], ["slug", "mariano-beier"], ["created_at", Sat, 22 Mar 2014 20:46:19 UTC +00:00], ["updated_at", Sat, 22 Mar 2014 20:46:19 UTC +00:00], ["id", 10]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."slug" = 'ignacio_hane' LIMIT 1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'gene.leffler@gerlach.name' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER('ignacio_hane') LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "roles", "slug", "updated_at", "username") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", Sat, 22 Mar 2014 20:46:19 UTC +00:00], ["email", "gene.leffler@gerlach.name"], ["encrypted_password", "$2a$04$HbaI8U.8QZmJyQcusgT0ruRNABfoaka383nyw8iCWFTO9VGQpJtMK"], ["roles", "--- []\n"], ["slug", "ignacio_hane"], ["updated_at", Sat, 22 Mar 2014 20:46:19 UTC +00:00], ["username", "ignacio_hane"]]
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."email" = 'gene.leffler@gerlach.name' AND "users"."id" != 11) LIMIT 1[0m
+  [1m[35mIdentity Exists (0.1ms)[0m  SELECT 1 AS one FROM "identities" WHERE "identities"."user_id" = $1 LIMIT 1  [["user_id", 11]]
+  [1m[36mIdentity Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "identities" WHERE "identities"."user_id" = $1 LIMIT 1[0m  [["user_id", 11]]
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE (LOWER("users"."username") = LOWER('ignacio_hane') AND "users"."id" != 11) LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "users" SET "roles" = $1, "email" = $2, "username" = $3, "encrypted_password" = $4, "slug" = $5, "created_at" = $6, "updated_at" = $7, "id" = $8 WHERE "users"."id" = 11[0m  [["roles", "---\n- user\n"], ["email", "gene.leffler@gerlach.name"], ["username", "ignacio_hane"], ["encrypted_password", "$2a$04$HbaI8U.8QZmJyQcusgT0ruRNABfoaka383nyw8iCWFTO9VGQpJtMK"], ["slug", "ignacio_hane"], ["created_at", Sat, 22 Mar 2014 20:46:19 UTC +00:00], ["updated_at", Sat, 22 Mar 2014 20:46:19 UTC +00:00], ["id", 11]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."slug" = 'vesta' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'maryjane@streich.org' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER('vesta') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "roles", "slug", "updated_at", "username") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", Sat, 22 Mar 2014 20:46:19 UTC +00:00], ["email", "maryjane@streich.org"], ["encrypted_password", "$2a$04$YTKUqlLCzd8KufP0EOfmzuStlqKdeUCYvIr8BeEV/Li/ZjxdumIq2"], ["roles", "--- []\n"], ["slug", "vesta"], ["updated_at", Sat, 22 Mar 2014 20:46:19 UTC +00:00], ["username", "vesta"]]
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."email" = 'maryjane@streich.org' AND "users"."id" != 12) LIMIT 1
+  [1m[36mIdentity Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "identities" WHERE "identities"."user_id" = $1 LIMIT 1[0m  [["user_id", 12]]
+  [1m[35mIdentity Exists (0.1ms)[0m  SELECT 1 AS one FROM "identities" WHERE "identities"."user_id" = $1 LIMIT 1  [["user_id", 12]]
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE (LOWER("users"."username") = LOWER('vesta') AND "users"."id" != 12) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "roles" = $1, "email" = $2, "username" = $3, "encrypted_password" = $4, "slug" = $5, "created_at" = $6, "updated_at" = $7, "id" = $8 WHERE "users"."id" = 12  [["roles", "---\n- user\n"], ["email", "maryjane@streich.org"], ["username", "vesta"], ["encrypted_password", "$2a$04$YTKUqlLCzd8KufP0EOfmzuStlqKdeUCYvIr8BeEV/Li/ZjxdumIq2"], ["slug", "vesta"], ["created_at", Sat, 22 Mar 2014 20:46:19 UTC +00:00], ["updated_at", Sat, 22 Mar 2014 20:46:19 UTC +00:00], ["id", 12]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."slug" = 'jose' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER('jose') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER('jose') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."slug" = 'yasmine' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'demarcus@ward.info' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER('yasmine') LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "roles", "slug", "updated_at", "username") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", Sat, 22 Mar 2014 20:46:19 UTC +00:00], ["email", "demarcus@ward.info"], ["encrypted_password", "$2a$04$1mLlNqumV8pCN69IBI/Pw.Rv1aRYxW1q/QdaPJ4T3pkQ1g36GBVWm"], ["roles", "--- []\n"], ["slug", "yasmine"], ["updated_at", Sat, 22 Mar 2014 20:46:19 UTC +00:00], ["username", "yasmine"]]
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."email" = 'demarcus@ward.info' AND "users"."id" != 13) LIMIT 1
+  [1m[36mIdentity Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "identities" WHERE "identities"."user_id" = $1 LIMIT 1[0m  [["user_id", 13]]
+  [1m[35mIdentity Exists (0.1ms)[0m  SELECT 1 AS one FROM "identities" WHERE "identities"."user_id" = $1 LIMIT 1  [["user_id", 13]]
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE (LOWER("users"."username") = LOWER('yasmine') AND "users"."id" != 13) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "roles" = $1, "email" = $2, "username" = $3, "encrypted_password" = $4, "slug" = $5, "created_at" = $6, "updated_at" = $7, "id" = $8 WHERE "users"."id" = 13  [["roles", "---\n- user\n"], ["email", "demarcus@ward.info"], ["username", "yasmine"], ["encrypted_password", "$2a$04$1mLlNqumV8pCN69IBI/Pw.Rv1aRYxW1q/QdaPJ4T3pkQ1g36GBVWm"], ["slug", "yasmine"], ["created_at", Sat, 22 Mar 2014 20:46:19 UTC +00:00], ["updated_at", Sat, 22 Mar 2014 20:46:19 UTC +00:00], ["id", 13]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."slug" = 'jose' LIMIT 1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER('jose') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'josefina@keler.org' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER('jose') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."slug" = 'louisa-bednar' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'vivienne@bartellmurray.name' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER('louisa.bednar') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "roles", "slug", "updated_at", "username") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", Sat, 22 Mar 2014 20:46:19 UTC +00:00], ["email", "vivienne@bartellmurray.name"], ["encrypted_password", "$2a$04$VRh.IBA67.CY7CeG1RrAGORf1vTZCmOo92fClOsfF4lVJTPPp7NqG"], ["roles", "--- []\n"], ["slug", "louisa-bednar"], ["updated_at", Sat, 22 Mar 2014 20:46:19 UTC +00:00], ["username", "louisa.bednar"]]
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."email" = 'vivienne@bartellmurray.name' AND "users"."id" != 14) LIMIT 1[0m
+  [1m[35mIdentity Exists (0.1ms)[0m  SELECT 1 AS one FROM "identities" WHERE "identities"."user_id" = $1 LIMIT 1  [["user_id", 14]]
+  [1m[36mIdentity Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "identities" WHERE "identities"."user_id" = $1 LIMIT 1[0m  [["user_id", 14]]
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE (LOWER("users"."username") = LOWER('louisa.bednar') AND "users"."id" != 14) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "roles" = $1, "email" = $2, "username" = $3, "encrypted_password" = $4, "slug" = $5, "created_at" = $6, "updated_at" = $7, "id" = $8 WHERE "users"."id" = 14[0m  [["roles", "---\n- user\n"], ["email", "vivienne@bartellmurray.name"], ["username", "louisa.bednar"], ["encrypted_password", "$2a$04$VRh.IBA67.CY7CeG1RrAGORf1vTZCmOo92fClOsfF4lVJTPPp7NqG"], ["slug", "louisa-bednar"], ["created_at", Sat, 22 Mar 2014 20:46:19 UTC +00:00], ["updated_at", Sat, 22 Mar 2014 20:46:19 UTC +00:00], ["id", 14]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."slug" = 'jose' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER('jose') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.9ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."slug" = 'milford_pouros' LIMIT 1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'matilda@jones.biz' LIMIT 1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER('milford_pouros') LIMIT 1
+  [1m[36mSQL (3.9ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "roles", "slug", "updated_at", "username") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", Sat, 22 Mar 2014 20:47:06 UTC +00:00], ["email", "matilda@jones.biz"], ["encrypted_password", "$2a$04$LcJLB/5ct6tl./nxE7ZR1unqLEW9QOp/gHR2NtEpPNTPqSYed4.g."], ["roles", "--- []\n"], ["slug", "milford_pouros"], ["updated_at", Sat, 22 Mar 2014 20:47:06 UTC +00:00], ["username", "milford_pouros"]]
+  [1m[35mUser Exists (0.4ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."email" = 'matilda@jones.biz' AND "users"."id" != 15) LIMIT 1
+  [1m[36mIdentity Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "identities" WHERE "identities"."user_id" = $1 LIMIT 1[0m  [["user_id", 15]]
+  [1m[35mIdentity Exists (0.2ms)[0m  SELECT 1 AS one FROM "identities" WHERE "identities"."user_id" = $1 LIMIT 1  [["user_id", 15]]
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE (LOWER("users"."username") = LOWER('milford_pouros') AND "users"."id" != 15) LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "users" SET "roles" = $1, "email" = $2, "username" = $3, "encrypted_password" = $4, "slug" = $5, "created_at" = $6, "updated_at" = $7, "id" = $8 WHERE "users"."id" = 15  [["roles", "---\n- user\n"], ["email", "matilda@jones.biz"], ["username", "milford_pouros"], ["encrypted_password", "$2a$04$LcJLB/5ct6tl./nxE7ZR1unqLEW9QOp/gHR2NtEpPNTPqSYed4.g."], ["slug", "milford_pouros"], ["created_at", Sat, 22 Mar 2014 20:47:06 UTC +00:00], ["updated_at", Sat, 22 Mar 2014 20:47:06 UTC +00:00], ["id", 15]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mIdentity Exists (0.2ms)[0m  SELECT 1 AS one FROM "identities" WHERE "identities"."user_id" = $1 LIMIT 1  [["user_id", 15]]
+  [1m[36mIdentity Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "identities" WHERE "identities"."user_id" = $1 LIMIT 1[0m  [["user_id", 15]]
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM "users" WHERE (LOWER("users"."username") = LOWER('milford_pouros') AND "users"."id" != 15) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."slug" = 'claudie-abbott' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'sylvester.stokes@nolanarmstrong.name' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER('claudie.abbott') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "roles", "slug", "updated_at", "username") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", Sat, 22 Mar 2014 20:47:06 UTC +00:00], ["email", "sylvester.stokes@nolanarmstrong.name"], ["encrypted_password", "$2a$04$fwlKkZKc55itAr2HM8nDW.JwpSGqWJmFSQ8kvNGyqI307MEXWmet2"], ["roles", "--- []\n"], ["slug", "claudie-abbott"], ["updated_at", Sat, 22 Mar 2014 20:47:06 UTC +00:00], ["username", "claudie.abbott"]]
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."email" = 'sylvester.stokes@nolanarmstrong.name' AND "users"."id" != 16) LIMIT 1
+  [1m[36mIdentity Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "identities" WHERE "identities"."user_id" = $1 LIMIT 1[0m  [["user_id", 16]]
+  [1m[35mIdentity Exists (0.1ms)[0m  SELECT 1 AS one FROM "identities" WHERE "identities"."user_id" = $1 LIMIT 1  [["user_id", 16]]
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE (LOWER("users"."username") = LOWER('claudie.abbott') AND "users"."id" != 16) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "roles" = $1, "email" = $2, "username" = $3, "encrypted_password" = $4, "slug" = $5, "created_at" = $6, "updated_at" = $7, "id" = $8 WHERE "users"."id" = 16  [["roles", "---\n- user\n"], ["email", "sylvester.stokes@nolanarmstrong.name"], ["username", "claudie.abbott"], ["encrypted_password", "$2a$04$fwlKkZKc55itAr2HM8nDW.JwpSGqWJmFSQ8kvNGyqI307MEXWmet2"], ["slug", "claudie-abbott"], ["created_at", Sat, 22 Mar 2014 20:47:06 UTC +00:00], ["updated_at", Sat, 22 Mar 2014 20:47:06 UTC +00:00], ["id", 16]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 16]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."slug" = 'ismael' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'ezequiel@ruel.org' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER('ismael') LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "roles", "slug", "updated_at", "username") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", Sat, 22 Mar 2014 20:47:06 UTC +00:00], ["email", "ezequiel@ruel.org"], ["encrypted_password", "$2a$04$n/7QwRhruMekVKsTi2i1sO/sC5tuy/m/mS7QwVxDd.6k2MrvNjq56"], ["roles", "--- []\n"], ["slug", "ismael"], ["updated_at", Sat, 22 Mar 2014 20:47:06 UTC +00:00], ["username", "ismael"]]
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."email" = 'ezequiel@ruel.org' AND "users"."id" != 17) LIMIT 1
+  [1m[36mIdentity Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "identities" WHERE "identities"."user_id" = $1 LIMIT 1[0m  [["user_id", 17]]
+  [1m[35mIdentity Exists (0.1ms)[0m  SELECT 1 AS one FROM "identities" WHERE "identities"."user_id" = $1 LIMIT 1  [["user_id", 17]]
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE (LOWER("users"."username") = LOWER('ismael') AND "users"."id" != 17) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "roles" = $1, "email" = $2, "username" = $3, "encrypted_password" = $4, "slug" = $5, "created_at" = $6, "updated_at" = $7, "id" = $8 WHERE "users"."id" = 17  [["roles", "---\n- user\n"], ["email", "ezequiel@ruel.org"], ["username", "ismael"], ["encrypted_password", "$2a$04$n/7QwRhruMekVKsTi2i1sO/sC5tuy/m/mS7QwVxDd.6k2MrvNjq56"], ["slug", "ismael"], ["created_at", Sat, 22 Mar 2014 20:47:06 UTC +00:00], ["updated_at", Sat, 22 Mar 2014 20:47:06 UTC +00:00], ["id", 17]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."slug" = 'blanche' LIMIT 1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'rachel@hettinger.name' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER('blanche') LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "roles", "slug", "updated_at", "username") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", Sat, 22 Mar 2014 20:47:06 UTC +00:00], ["email", "rachel@hettinger.name"], ["encrypted_password", "$2a$04$6Cvz3VAhRVwVmJs8nFAjaulY8XjmojAOJd/Ea/fuq0dXmlGFsWZsy"], ["roles", "--- []\n"], ["slug", "blanche"], ["updated_at", Sat, 22 Mar 2014 20:47:06 UTC +00:00], ["username", "blanche"]]
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."email" = 'rachel@hettinger.name' AND "users"."id" != 18) LIMIT 1[0m
+  [1m[35mIdentity Exists (0.1ms)[0m  SELECT 1 AS one FROM "identities" WHERE "identities"."user_id" = $1 LIMIT 1  [["user_id", 18]]
+  [1m[36mIdentity Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "identities" WHERE "identities"."user_id" = $1 LIMIT 1[0m  [["user_id", 18]]
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE (LOWER("users"."username") = LOWER('blanche') AND "users"."id" != 18) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "roles" = $1, "email" = $2, "username" = $3, "encrypted_password" = $4, "slug" = $5, "created_at" = $6, "updated_at" = $7, "id" = $8 WHERE "users"."id" = 18[0m  [["roles", "---\n- user\n"], ["email", "rachel@hettinger.name"], ["username", "blanche"], ["encrypted_password", "$2a$04$6Cvz3VAhRVwVmJs8nFAjaulY8XjmojAOJd/Ea/fuq0dXmlGFsWZsy"], ["slug", "blanche"], ["created_at", Sat, 22 Mar 2014 20:47:06 UTC +00:00], ["updated_at", Sat, 22 Mar 2014 20:47:06 UTC +00:00], ["id", 18]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."slug" = 'yasmine' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'chandler_schulist@schulist.org' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER('yasmine') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."slug" = 'carmel-thiel' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'andre_quigley@mosciski.biz' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER('carmel.thiel') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "roles", "slug", "updated_at", "username") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", Sat, 22 Mar 2014 20:47:06 UTC +00:00], ["email", "andre_quigley@mosciski.biz"], ["encrypted_password", "$2a$04$ZLmUns3T2V4TYgSkqdSlyOkOffGJ2MwCdVyGRHVz6NliUif52MgNG"], ["roles", "--- []\n"], ["slug", "carmel-thiel"], ["updated_at", Sat, 22 Mar 2014 20:47:06 UTC +00:00], ["username", "carmel.thiel"]]
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."email" = 'andre_quigley@mosciski.biz' AND "users"."id" != 19) LIMIT 1[0m
+  [1m[35mIdentity Exists (0.1ms)[0m  SELECT 1 AS one FROM "identities" WHERE "identities"."user_id" = $1 LIMIT 1  [["user_id", 19]]
+  [1m[36mIdentity Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "identities" WHERE "identities"."user_id" = $1 LIMIT 1[0m  [["user_id", 19]]
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE (LOWER("users"."username") = LOWER('carmel.thiel') AND "users"."id" != 19) LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "users" SET "roles" = $1, "email" = $2, "username" = $3, "encrypted_password" = $4, "slug" = $5, "created_at" = $6, "updated_at" = $7, "id" = $8 WHERE "users"."id" = 19[0m  [["roles", "---\n- user\n"], ["email", "andre_quigley@mosciski.biz"], ["username", "carmel.thiel"], ["encrypted_password", "$2a$04$ZLmUns3T2V4TYgSkqdSlyOkOffGJ2MwCdVyGRHVz6NliUif52MgNG"], ["slug", "carmel-thiel"], ["created_at", Sat, 22 Mar 2014 20:47:06 UTC +00:00], ["updated_at", Sat, 22 Mar 2014 20:47:06 UTC +00:00], ["id", 19]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."slug" = 'jose' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER('jose') LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'alana@weinat.info' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER('jose') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."slug" = 'aliyah-ernser' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'sedrick@becker.net' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER('aliyah.ernser') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "roles", "slug", "updated_at", "username") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", Sat, 22 Mar 2014 20:47:06 UTC +00:00], ["email", "sedrick@becker.net"], ["encrypted_password", "$2a$04$roFNpoD63VlKHiHI.RBrGuP3595AOvqgK1DVzpqWzWIoxhpfbOPR."], ["roles", "--- []\n"], ["slug", "aliyah-ernser"], ["updated_at", Sat, 22 Mar 2014 20:47:06 UTC +00:00], ["username", "aliyah.ernser"]]
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."email" = 'sedrick@becker.net' AND "users"."id" != 20) LIMIT 1
+  [1m[36mIdentity Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "identities" WHERE "identities"."user_id" = $1 LIMIT 1[0m  [["user_id", 20]]
+  [1m[35mIdentity Exists (0.1ms)[0m  SELECT 1 AS one FROM "identities" WHERE "identities"."user_id" = $1 LIMIT 1  [["user_id", 20]]
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE (LOWER("users"."username") = LOWER('aliyah.ernser') AND "users"."id" != 20) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "roles" = $1, "email" = $2, "username" = $3, "encrypted_password" = $4, "slug" = $5, "created_at" = $6, "updated_at" = $7, "id" = $8 WHERE "users"."id" = 20  [["roles", "---\n- user\n"], ["email", "sedrick@becker.net"], ["username", "aliyah.ernser"], ["encrypted_password", "$2a$04$roFNpoD63VlKHiHI.RBrGuP3595AOvqgK1DVzpqWzWIoxhpfbOPR."], ["slug", "aliyah-ernser"], ["created_at", Sat, 22 Mar 2014 20:47:06 UTC +00:00], ["updated_at", Sat, 22 Mar 2014 20:47:06 UTC +00:00], ["id", 20]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."slug" = 'jose' LIMIT 1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER('jose') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m

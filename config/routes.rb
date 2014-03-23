@@ -15,6 +15,7 @@ MyApp::Application.routes.draw do
   get '/home' => 'root#home'
   get '/about' => 'root#about'
   get '/profile' => 'root#profile'
+  post '/soundcloud_post' => "root#soundcloud_post"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

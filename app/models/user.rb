@@ -42,7 +42,8 @@ class User < ActiveRecord::Base
       if identity
         user_to_return = identity.user
       else
-        user_to_return = create_user_from_omniauth
+        user_to_return = create_user_from_omniauth(auth)
+        identity = user_to_return.identities.first
       end
       return [user_to_return, identity]
     end
@@ -75,12 +76,13 @@ class User < ActiveRecord::Base
       end
     end
 
+    # returns a newly created user with soundcloud identity
     def create_user_from_omniauth(auth)
       # no identity exists...create new user for this identity
       user = User.new
       # build the associated identity for this provider, first converting the auth info to an encoded json object
       auth_hash = ActiveSupport::JSON.encode(auth.to_hash) rescue auth.to_s
-      identity = user.identities.build(provider: auth.provider, uid: auth.uid.to_s, info_hash:auth_hash, profile_url: auth.extra.raw_info.uri)
+      identity = user.identities.build(provider: auth.provider, uid: auth.uid.to_s, info_hash:auth_hash, profile_url: auth.extra.raw_info.uri, auth_token: auth.credentials.token)
       # update user attributes based on what we grab
       user = user.update_user_from_auth(auth)
       user.save # attempt to persist user...likely doesn't have an email address

@@ -25,6 +25,7 @@ gem 'jquery-rails'
 gem "devise"
 gem "omniauth-soundcloud"
 
+gem "soundcloud"
 # set env variables within config/application.yml
 gem "figaro"
 

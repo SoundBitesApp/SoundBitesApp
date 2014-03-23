@@ -1,7 +1,26 @@
-<h1>Welcome to MyApp!</h1>
-<p>Find me in app/views/root/index.html.erb</p>
-<h2>All users</h2>
-<% @users.each do |user|%>
-  <%= user.email %>
+<h1>Welcome to Sound Bites!</h1>
+<h3>Get an earful of gravy, a mouthful of vibrato.</h3>
+<% if current_user %>
+  <h5>Orchestrate your plates.  Start by authing with SoundCloud</h5>
+  <%= form_tag "/soundcloud_post", multipart:true do%>
+    <div class='field'><%= label_tag :name %><br />
+    <%= text_field_tag :name %></div>
+    <div class='field'><%= label_tag :description %><br />
+    <%= text_area_tag :description %></div>
+    <div class='field'><%= label_tag :tags, "Tags (comma separated)" %><br />
+    <%= text_field_tag :tags %></div>
+    <div class='field'><%= label_tag :picture, "Picture of the food" %><br />
+    <%= file_field_tag :picture %></div>
+    <div class='field'><%= label_tag :file, "A sound byte that you hear when you taste this" %><br />
+    <%= file_field_tag :file %></div>
+
+    <div class="actions"><%= submit_tag %></div>
+  <% end %>
+<% end %>
+<%if current_user && current_user.has_role?("admin") %>
+  <h2>All users</h2>
+  <% @users.each do |user|%>
+    <%= user.email %>
+  <% end %>
 <% end %>
 
